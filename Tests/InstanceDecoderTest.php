@@ -2,17 +2,17 @@
 
 namespace Wix\FrameworkComponent\Tests\Instance;
 
-use Wix\FrameworkComponent\Instance\Decoder;
+use Wix\FrameworkComponent\InstanceDecoder;
 
 class DecoderTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @param array $config
-     * @return Decoder
+     * @return InstanceDecoder
      */
     protected function getDecoder(array $config)
     {
-        return new Decoder($config);
+        return new InstanceDecoder($config);
     }
 
     /**
@@ -32,7 +32,7 @@ class DecoderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Wix\BaseBundle\Exception\InvalidInstanceException
+     * @expectedException \Wix\FrameworkComponent\Exception\InvalidInstanceException
      */
     public function testParseWithWrongApplicationSecret()
     {
@@ -41,7 +41,7 @@ class DecoderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Wix\BaseBundle\Exception\InvalidInstanceException
+     * @expectedException \Wix\FrameworkComponent\Exception\InvalidInstanceException
      */
     public function testParseWithInvalidInstance()
     {
@@ -50,7 +50,7 @@ class DecoderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException \Wix\BaseBundle\Exception\InvalidInstanceException
+     * @expectedException \Wix\FrameworkComponent\Exception\InvalidInstanceException
      */
     public function testParseWithoutAnInstance()
     {
