@@ -1,3 +1,29 @@
 {
-    "name": "wix/framework-component"
+    "name": "wix/framework-component",
+    "type": "library",
+    "description": "Wix Framework Component for decoding Wix instances adjusted for composer according to PSR-0 standards",
+    "keywords": ["Wix"],
+    "homepage": "https://github.com/ranm8/WixFrameworkComponent",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ran Mizrahi",
+            "email": "ranm@codeoasis.com"
+        },
+        {
+            "name": "Ronen Amiel",
+            "email": "ronena@codeoasis.com"
+        },
+        {
+          	"name": "Elad Rom",
+          	"email": "rome@codeoasis.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": { "Wix\\WixFrameworkComponent": "" }
+    },
+    "target-dir": "Wix/WixFrameworkComponent"
 }
