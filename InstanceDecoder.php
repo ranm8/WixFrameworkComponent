@@ -3,6 +3,8 @@
 namespace Wix\FrameworkComponent;
 
 use Wix\FrameworkComponent\Exception\InvalidInstanceException;
+use Wix\FrameworkComponent\Instance\Instance;
+use Wix\FrameworkComponent\Instance\InstanceInterface;
 
 /**
  * A service that decodes Wix instances. It has one public method: parse. It accepts a Wix instance and returns an
@@ -36,7 +38,7 @@ class InstanceDecoder implements InstanceDecoderInterface
      * Parses an instance and returns an Instance object that represents it's data.
      *
      * @param string $instance An instance to parse
-     * @return Instance The data of the instance as an Instance object
+     * @return InstanceInterface The data of the instance as an Instance object
      */
     public function parse($instance)
     {
