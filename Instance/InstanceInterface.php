@@ -29,7 +29,37 @@ interface InstanceInterface {
     public function getUid();
 
     /**
+     * Returns the current user permission
+     *
      * @return string
      */
     public function getPermissions();
+
+    /**
+     * Returns the user IP
+     *
+     * @return string
+     */
+    public function getIp();
+
+    /**
+     * Returns the user port
+     *
+     * @return int
+     */
+    public function getPort();
+
+    /**
+     * Determines if in demo mode or not
+     *
+     * @return bool
+     */
+    public function getDemoMode();
+
+    /**
+     * Returns the premium vendor product ID if exists
+     *
+     * @return string|null
+     */
+    public function getVendorProductId();
 }

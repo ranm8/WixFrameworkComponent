@@ -69,4 +69,54 @@ class Instance implements InstanceInterface
 
         return $this->instance->permissions;
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getIp()
+    {
+        if (!isset($this->instance->ipAndPort)) {
+            return null;
+        }
+
+        $exploded = explode('/', $this->instance->ipAndPort);
+        return $exploded[1];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getPort()
+    {
+        if (!isset($this->instance->ipAndPort)) {
+            return null;
+        }
+
+        $exploded = explode('/', $this->instance->ipAndPort);
+        return (int) $exploded[0];
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getDemoMode()
+    {
+        if (!isset($this->instance->demoMode)) {
+            return null;
+        }
+
+        return $this->instance->demoMode;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getVendorProductId()
+    {
+        if (!isset($this->instance->vendorProductId)) {
+            return null;
+        }
+
+        return $this->instance->vendorProductId;
+    }
 }
