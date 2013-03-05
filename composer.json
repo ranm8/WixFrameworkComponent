@@ -23,7 +23,7 @@
         "php": ">=5.3.3"
     },
     "autoload": {
-        "psr-0": { "Wix\\WixFrameworkComponent": "" }
+        "psr-0": { "Wix\\FrameworkComponent": "" }
     },
-    "target-dir": "Wix/WixFrameworkComponent"
+    "target-dir": "Wix/FrameworkComponent"
 }
