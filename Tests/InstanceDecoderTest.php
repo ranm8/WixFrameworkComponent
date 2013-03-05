@@ -63,6 +63,6 @@ class DecoderTest extends \PHPUnit_Framework_TestCase
         $decoder = $this->getDecoder(array('application_secret' => $this->getApplicationSecret()));
         $instance = $decoder->parse($this->getInstance());
 
-        $this->assertEquals(get_class($instance), 'Wix\BaseBundle\Instance\Instance');
+        $this->assertEquals(get_class($instance), 'Wix\FrameworkComponent\Instance\Instance');
     }
 }
